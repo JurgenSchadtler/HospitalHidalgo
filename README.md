@@ -3,11 +3,12 @@ Proyecto Para el Hospital Hidalgo
 
 Proyecto Para el Hospital Hidalgo 2020
 
-Integrantes:
 
---Jürgen Schädtler Zertuche
---Jose Antonio Diaz Arvizu
---Oswaldo Carreon Silva
---Esteban Garcia Aguirre
---Daniel Soto
---Nicolas Every 
+# José Arvizu 		-------- IA
+# Esteban Garcia 	-------- IA
+# Cristina Gaytán 	-------- IA
+# Omar Mena 		-------- IA
+# Oswaldo Carreón 	-------- IA
+# Jürgen Schädtler 	-------- IA
+# Maximiliano Lara --------- IA
+# Nicolás Every		-------- IA
