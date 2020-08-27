@@ -335,3 +335,108 @@ while (i < 10) {
     console.log(`Numero: ${i}`);
     i++;
 }
+
+
+// Scope es la visibilidad de una variable
+// Es ecomendable usar let o const, no recomendable usar var 
+let musica = 'Rock';
+
+if (musica) {
+    let musica = 'Grunge';
+    console.log('Dentro del if: ' + musica);
+}
+
+console.log('Furea del if:' + musica);
+
+
+//Destructuring
+
+const client = {
+    nombr: 'Alejandra',
+    tipo: 'Premium',
+    datos: {
+        ubicacion: {
+            ciudad: 'Mexico',
+            pais: 'Mexico'
+        },
+        cuenta: {
+            desde: '10-12-2020',
+            saldo: 4000
+        }
+    }
+}
+
+console.log(client);
+
+//Destructuring en acción 
+
+let { nombr, tipo } = client;
+let { datos: { ubicacion: { ciudad } } } = client;
+
+console.log(ciudad);
+
+//Object Literral enhacement
+
+const grupo = 'OV7',
+    genero = 'Espanol',
+    canciones = ['La calle de las sirenas', 'A tu lado', 'Marchate'];
+
+const ov7 = { grupo, genero, canciones }
+
+console.log(ov7);
+
+// .filter .find .reduce
+
+const alumni = [
+    { al: 'Juan', edad: 20 },
+    { al: 'Jose', edad: 50 },
+    { al: 'Jorge', edad: 32 },
+    { al: 'Alejandra', edad: 18 },
+];
+
+//Obtener Informacion filtrandola
+const mayores = alumni.filter(persona => persona.edad > 20);
+console.log(mayores);
+
+//Extraer informacion o encontrarla 
+
+const alejandra = alumni.find(persona => persona.al == 'Alejandra');
+console.log(alejandra);
+
+//reduce
+
+let total = alumni.reduce((edadTotal, persona) => edadTotal + persona.edad, 0);
+console.log(total);
+//promedio de edad 
+console.log(total / alumni.length);
+
+
+// Fetch API 
+
+descargarUsuarios(10);
+
+function descargarUsuarios(cantidad) {
+    const api = `https://api.randomuser.me/?nat=US&results=${cantidad}`;
+
+    //llamado a fetch
+
+
+    fetch(api)
+        .then(respuesta => respuesta.json())
+        .then(datos => imprimirHTML(datos.results));
+}
+
+function imprimirHTML(datos) {
+    datos.forEach(usuario => {
+        const li = document.createElement('li');
+
+        const { name: { first }, name: { last }, picture: { medium } } = usuario;
+
+        li.innerHTML = `
+                Nombre: ${first} ${last}
+                imagen: <img src="${medium}">
+        `;
+
+        document.querySelector('#app').appendChild(li);
+    });
+}
