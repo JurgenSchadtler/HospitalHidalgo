@@ -1,0 +1,18 @@
+body {
+    background-image: url(bg.jpg);
+    background-repeat: repeat;
+    
+}
+
+form {
+    color:aliceblue;
+}
+
+h1 {
+    color:deeppink;
+    
+}
+
+.decoracion {
+    border: 10px dashed black;
+}
