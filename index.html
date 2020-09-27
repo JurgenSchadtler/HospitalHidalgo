@@ -2,37 +2,46 @@
 
 <html>
     <head>
-        <title> Registro de pacientes HH</title>
-        <link rel="stylesheet" href="style.css">
+        <title> Registro de pacientes </title>
+        
+        <link rel="stylesheet" href="../css/style.css">
+        
+
     </head>
     
-    <body>
-        <table>
-            <tr>
-                <td>
-                    <a href="#"><img src="logo.jpg" width="150"></a>
-                </td>
-                <td>
-                    <h1> Centenario Hospital Miguel Hidalgo.</h1>
-                </td>
-            </tr>
-        </table>
+     <body>
         
-        <hr> <br><br>
-        <form>
+        <header>
             
-                Ususario: <input type="text"> <br><br><br>
-                Contraseña: <input type="password"> <br><br>
-                 <button> Acceder. </button>
+            <div class="content">   
+                <div class="nombre">
+                    <h1> Centenario Hospital Miguel Hidalgo.</h1>
+                </div>
+                
+                <nav>
+                    <ul class="navbar">
+                        <li> <a href="#"> Contacto</a></li>
+                        <li> <a href="#"> Mapa</a></li>
+                        <li> <a href="#"> Sign in</a></li>
+                        <li> <a href="#"> Sign up</a></li>
+                    </ul>
+                </nav>
+            </div>
             
-            
+        </header>  
+        
+ 
+        <form class="formulario">
+            <ul>
+                <li>Ususario: <input type="text" name="username" placeholder="Username" id="usuario"> </li>
+                <li>Contraseña: <input type="password" name="password " placeholder="Password" id="password"></li>
+                <li><button type="button"  onclick="acceder()" >Acceder</button></li>
+            </ul>
+    
         </form>
         
-        <div>
-            <img src="lion.png" class="decoracion">
-        </div>
-       
-            
-        
+        <script type="text/javascript" src="../js/script.js"></script>
+         
+         
     </body>
 </html>
